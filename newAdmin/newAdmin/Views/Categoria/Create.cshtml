@@ -1,0 +1,38 @@
+﻿@model newAdmin.Models.Categorium
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<style>
+    body {
+        background-color: background: #67B26F; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #4ca2cd, #67B26F); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        ;
+    }
+</style>
+
+<h4>Categorium</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreCategoria" class="control-label"></label>
+                <input asp-for="NombreCategoria" class="form-control" />
+                <span asp-validation-for="NombreCategoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
